@@ -1,11 +1,8 @@
-import random
+selected_light = cmds.ls( selection=True)
+my_light = selected_light[0]
 
-Selectedlight = cmds.ls( selection=True )
-mylight = Selectedlight[0]
-Valuelist = [0.0 , 0.1 , 0.2 , 0.3 , 0.4 , 0.5 , 0.6 , 0.7 , 0.8 , 0.9 , 1]
-for i in Valuelist:
-    value_a = random.random()
-    value_b = random.random()
-    value_c = random.random()
-    cmds.setAttr(mylight + ".color" , value_a , value_b , value_c , type = "double3")
-	
+colorR = random.random()
+colorG = random.random()
+colorB = random.random()
+    
+cmds.setAttr(f"{my_light}.color" , colorR , colorG , colorB, type = "double3")
