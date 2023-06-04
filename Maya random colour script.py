@@ -1,3 +1,6 @@
+import random
+import maya.cmds as cmds
+
 selected_light = cmds.ls( selection=True)
 my_light = selected_light[0]
 
